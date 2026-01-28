@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jianna Rhainz Reovoca</title>
+  <style>
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      height: 100vh;
+      background-color: #000000;
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 30px 40px;
+    }
+
+    .site-title {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #6b1919;
+    }
+
+    .rectangle {
+  position: absolute;
+  bottom: 50px;   /* distance from bottom */
+  right: 100px;    /* distance from right */
+  width: 90%;
+  height: 500px;
+  background-color: #121212;
+  border: 2px solid rgba(113, 109, 109, 0.589);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  transition: 0.3s ease;
+
+}
+.rectangle:hover {
+  background-color: #666;
+  box-shadow: 0 8px 20px rgba(92, 89, 89, 0.5);
+}
+.about-me {
+  padding: 60px;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+.about-me h2 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.about-me .intro {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  font-style: italic;
+  color: #ccc;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  justify-items: center;
+}
+
+.container img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+  cursor: pointer;
+  perspective: 800px; /* Enables 3D effect */
+   position: relative;
+    transition: transform 0.4s ease; 
+
+
+}
+.container img:nth-child(1) {
+  transform: rotate(2deg);
+  border: 8px solid #0c0c0c;
+  right: 200px;
+}
+/* Optional: staggered layout for creativity */
+.container img:nth-child(2) {
+  transform: rotate(2deg);
+    border: 8px solid #090909;
+    left: 200px;
+}
+
+
+.container img:hover {
+    transform: scale(1.1) rotate(2deg); /* keeps rotation and adds zoom */
+    filter: brightness(1.1) drop-shadow(0 0 10px #242323);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.rectangle2 {
+  position: absolute;
+  bottom: 100px;   /* distance from bottom */
+  right: 700px;    /* distance from right */
+  width: 400px;
+  height: 500px;
+  background-color: #313030;
+  border: 2px solid rgb(243, 239, 239);
+  box-shadow: 0 4px 12px rgba(12, 12, 12, 0.849);
+  transition: transform 0.4s ease, z-index 0.4s ease;
+  transform: translateZ(-20px); /* Start behind */
+  z-index: 1;
+  font-size: 20px;
+  text-align: left;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+justify-content: center;
+
+
+}
+.rectangle2:hover {
+  transform: translateZ(30px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transform: translateZ(40px) scale(1.05); /* Move forward */
+  z-index: 10;
+
+}
+
+.rectangle3 {
+  position: absolute;
+  bottom: 100px;   /* distance from bottom */
+  right: 850px;    /* distance from right */
+  width: 700px;
+  height: 500px;
+  background-color: #0a0a0a;
+  border: 2px solid rgb(246, 242, 242);
+  box-shadow: 0 4px 12px rgba(15, 15, 15, 0.849);
+  transition: 0.3s ease;
+
+}
+.rectangle4 {
+  position: absolute;
+  bottom: 100px;   /* distance from bottom */
+  right: 50px;    /* distance from right */
+  width: 800px;
+  height: 500px;
+  background-color: #111111;
+  border: 2px solid rgb(234, 232, 232);
+  box-shadow: 0 4px 12px rgba(11, 11, 11, 0.849);
+  transition: 0.3s ease;
+
+}
+
+.info2 {
+  position: absolute;
+  bottom: 450px;   /* distance from bottom */
+  right: 350px;    /* distance from right */
+  width: 210px;
+  height: 40px;
+  background-color: #383737;
+  border: 2px dashed rgb(245, 236, 236);
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(37, 36, 36, 0.849);
+  transition: 0.3s ease;
+
+}
+.info2:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.info2 p {
+  font-size: 17px;
+  color: #f9f7f7;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  height: 40px;           /* make sure there's height */
+}
+.info3 {
+  position: absolute;
+  bottom: 200px;   /* distance from bottom */
+  left: 80px;    /* distance from right */
+  width: 180px;
+  height: 70px;
+  background-color: #383737;
+  border: 2px dashed rgb(245, 236, 236);
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(37, 36, 36, 0.849);
+  transition: 0.3s ease;
+
+}
+.info3:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+.info3 p {
+  font-size: 17px;
+  color: #f9f7f7;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  height: 60px;           /* make sure there's height */
+}
+.info1 {
+  position: absolute;
+  bottom: 390px;   /* distance from bottom */
+  right: 350px;    /* distance from right */
+  width: 180px;
+  height: 40px;
+  background-color: #383737;
+  border: 2px dashed rgb(245, 236, 236);
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(37, 36, 36, 0.849);
+  transition: 0.3s ease;
+
+}
+.info1:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+.info1 p {
+  font-size: 17px;
+  color: #f9f7f7;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  height: 40px;           /* make sure there's height */
+}
+.info4 {
+  position: absolute;
+  bottom: 330px;   /* distance from bottom */
+  right: 350px;    /* distance from right */
+  width: 180px;
+  height: 40px;
+  background-color: #383737;
+  border: 2px dashed rgb(245, 236, 236);
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(37, 36, 36, 0.849);
+  transition: 0.3s ease;
+
+}
+.info4:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+.info4 p {
+  font-size: 17px;
+  color: #f9f7f7;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  height: 40px;           /* make sure there's height */
+}
+.info5 {
+  position: absolute;
+  bottom: 270px;   /* distance from bottom */
+  right: 350px;    /* distance from right */
+  width: 250px;
+  height: 40px;
+  background-color: #383737;
+  border: 2px dashed rgb(245, 236, 236);
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(37, 36, 36, 0.849);
+  transition: 0.3s ease;
+
+}
+.info5:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+.info5 p {
+  font-size: 17px;
+  color: #f9f7f7;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  height: 40px;           /* make sure there's height */
+}
+.caption {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f5f5f5;
+  background: linear-gradient(to right, #333, #555);
+  padding: 1rem 1.5rem;
+  border-left: 5px solid #460507;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  max-width: 600px;
+  margin: 1rem auto;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+  </style>
+ <header>
+    <div class="site-title">Serhainz</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="index.html">About</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+    <div class="rectangle4"></div>
+ <div class="rectangle2">
+      <h3> Skills</h3>
+      <ul>
+        <li><span>HTML & CSS </span></li>
+        <li><span>Collage-style layout design skils</span></li>
+        <li><span>Time Management</span></li>
+        <li><span>Social Skills</span></li>
+        <li><span>Color Grading Skills</span></li>
+      </ul>
+      <h3> Hobbies & Joys</h3>
+      <ul>
+        <li><span>Painting & Drawing </span></li>
+        <li><span>Photo Editing</span></li>
+        <li><span>Video Editing</span></li>
+        <li><span>Filming</span></li>
+        <li><span>Crocheting</span></li>
+      </ul>
+       <h3> Interest</h3>
+      <ul>
+        <li><span>UI/UX Design </span></li>
+        <li><span> Exploring Programming Backend</span></li>
+        <li><span>Web development</span></li>
+        <li><span>Creative Design</span></li>
+        <li><span>Exploring Cloud Computing</span></li>
+      </ul>
+ </div>
+  <div class="rectangle3"></div>
+
+  
+<div class="container">
+  <img src="me1.jpg" alt="Photo 1">
+  <img src="me3.jpg" alt="Photo 3">
+</div>
+   <div class="info2">
+        <p>Jianna Rhainz Reovoca</p>
+   </div>
+    <div class="info3">
+        <p>Ig: @Serhainz <br> GitHub: @serhainz</p>
+   </div> 
+    <div class="info1">
+        <p>August 25 2006</p>
+   </div>
+   <div class="info4">
+        <p>Valenzuela CSity</p>
+   </div>
+      <div class="info5">
+        <p>Quezon City University</p>
+   </div>
+
+
+
+</body>
+</html>
